@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>7.8质量报告</title>
+    <link rel="stylesheet" href="./libs/bootstrap.min.css">
+    <link rel="stylesheet" href="./libs/header.css">
+    <link rel="stylesheet" href="./report.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- 标题 -->
+      <h1> 7.8版本Qos报告 </h1>
+
+      <!-- 报告抬头 -->
+      <div class="summary">
+        <div id="fdw-pricing-table">
+            <div class="plan plan2">
+                <div class="header">Android崩溃</div>
+                <div class="price">0.84%</div>
+                <!-- <div class="monthly">Android</div> -->
+                <ul>
+                    <li><b>0.10%</b> java崩溃率</li>
+                    <li><b>0.74%</b> native崩溃率</li>
+                    <li><b>&#8595 0.3%</b> 对比上版</li>
+                </ul>
+            </div>
+            <div class="plan plan3">
+                <div class="header">iPhone崩溃</div>
+                <div class="price">1.6%</div>
+                <!-- <div class="monthly">iOS</div> -->
+                <ul>
+                    <li><b>0.81%</b> oc崩溃率</li>
+                    <li><b>0.79%</b> native崩溃率</li>
+                    <li><b class='g'>&#8593 1.08%</b> 对比上版</li>
+                </ul>
+            </div>
+            <div class="plan plan4">
+                <div class="header">iPad崩溃</div>
+                <div class="price">1.07%</div>
+                <!-- <div class="monthly">iOS</div> -->
+                <ul>
+                    <li><b>0.38%</b> oc崩溃率</li>
+                    <li><b>0.69%</b> native崩溃率</li>
+                    <li><b class='r'>&#8595 0.01%</b> 对比上版</li>
+                </ul>
+            </div>
+            <div class="plan plan4">
+                <div class="header">性能分析与优化</div>
+                <ul>
+                    <li><b>奇秀Android客户端</b> 启动，进入直播间分析</li>
+                    <li><b>泡泡Android</b> 启动分析</li>
+                    <li><b>iPad启动</b> iPad启动优化介绍</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+
+      <!--android崩溃率数据-->
+      <div class="androidcrash crash">
+        <div class="itemtitle">Android崩溃率</div>
+        本版的崩溃降到1%以下，表现良好：<br>
+        java崩溃变化不大，系统崩溃占比60%以上。其他问题分布较为零散。<br>
+        native崩溃下降较多，其中ANR从上个版本占比35%左右下降到20%左右，总量下降一半以上。<br>
+        <div id="total" class="crashitem">
+          <div id="androidtotal"  class="doublecolumn"></div>
+          <div class="crashdesc">
+            Android崩溃率为0.84%，比起上个版本下降了0.3%。其中java下降了0.01%, native下降了0.29%。
+          </div>
+        </div>
+        <div id="top" class="crashitem">
+          <div id="androidtop"  class="column"></div>
+          <div class="crashdesc">
+            android手机5.x系统占总数的一半以上，6.0的设备数量进一步提升，4.3及以下版本设备逐渐变少。<br>
+            崩溃比率是逐版本下降的，5.0以后版本的崩溃率约为0.5%。<br>
+          </div>
+        </div>
+        <div id="java" class="crashitem">
+          <div id="androidjava" class="pie"></div>
+          <div class="crashdesc">
+            java崩溃为0.10%，比起上个版本下降了0.01%。崩溃前三的模块占全体崩溃的比例为系统崩溃(61.1%), nativemediaplayersdk.jar(9.4%), QYVideoClient(7.5%)。<br>
+          </div>
+        </div>
+        <div id="native" class="crashitem">
+          <div id="androidnative" class="pie"></div>
+          <div class="crashdesc">
+            native崩溃为0.74%，比起上个版本下降了0.29%。崩溃前三的模块占全体崩溃的比例为ANR(21.41%),  libc.so(15.72%),  libiqiyi_media_player.so(12.91%)。 <br>
+          </div>
+        </div>
+      </div>
+
+      <!--ios崩溃率数据-->
+      <div class="ioscrash crash">
+        <div class="itemtitle">iPhone崩溃率</div>
+        <!-- 本版的崩溃为历史最好水平：<br> -->
+        <!-- oc崩溃的主体为xx，比起上个版本，主要变化为xxxx。<br> -->
+        <div id="total" class="crashitem">
+          <div id="iostotal" class="doublecolumn"></div>
+          <div class="crashdesc">
+            iPhone崩溃率为1.6%，比起上个版本上升了1.08%。<br><br>
+          </div>
+        </div>
+        <div id="oc" class="crashitem">
+          <div id="iosoc" class="pie"></div>
+          <div class="crashdesc">
+            <!-- oc崩溃为xx%，比起上个版本下降了xx%。 -->
+            崩溃前三的模块依次为oc_qyapp(27.07%), dlna(25.38%), puma(9.89%)。<br>
+          </div>
+        </div>
+        <div id="top" class="crashitem">
+          <div id="iostopdevice"  class="column"></div>
+          <div class="crashdesc">
+            iPhone崩溃前5的机型依此为，iPhone4, iPhone6s, iPhone6s Plus, iPhone SE, iPhone5s<br>
+          </div>
+        </div>
+        <div id="top" class="crashitem">
+          <div id="iostopos"  class="column"></div>
+          <div class="crashdesc">
+            iPhone崩溃前5的系统版本依此为，os9.0, os7.0.5, os9.0.2, os7.0.3, os7.0.4。<br>
+          </div>
+        </div>
+      </div>
+
+      <div class="ioscrash crash">
+        <div class="itemtitle">iPad崩溃率</div>
+        <!-- 本版的崩溃为历史最好水平：<br> -->
+        <!-- oc崩溃的主体为xx，比起上个版本，主要变化为xxxx。<br> -->
+        <div id="total" class="crashitem">
+          <div id="ipadtotal" class="doublecolumn"></div>
+          <div class="crashdesc">
+            iPad崩溃率为1.08%，比起上个版本降低了0.35%。<br><br>
+          </div>
+        </div>
+        <div id="oc" class="crashitem">
+          <div id="ipadoc" class="pie"></div>
+          <div class="crashdesc">
+            <!-- oc崩溃为xx%，比起上个版本下降了xx%。 -->
+            崩溃前三的模块依次为hcdn(63.37%), puma(9.78%), CoreFoundation(7.43%)。<br>
+          </div>
+        </div>
+
+        <!-- <div id="top" class="crashitem">
+          <div id="ipadtopdevice"  class="column"></div>
+          <div class="crashdesc">
+            iPad崩溃前5的机型依此为，iPad Pro(Cellular), iPad mini4, iPad air2, iPad Pro(Wifi), iPad2。<br>
+          </div>
+        </div>
+        <div id="top" class="crashitem">
+          <div id="ipadtopos"  class="column"></div>
+          <div class="crashdesc">
+            iPad崩溃前5的系统版本依此为，os9.3, os9.0, os9.0.2, os8.1, os9.3.4。<br>
+          </div>
+        </div>
+      </div> -->
+
+      <!--android包大小对比-->
+      <div class="androidpackage package">
+        <div class="itemtitle">Android包大小(Mb)</div>
+        <div id="atotal" class="packagetotal">
+          <div id="apackagetotal" style="width:580px;height:300px;display:inline-block"></div>
+          <div class="packagedesc">
+            7.8的包大小比上个版本大了约3M。<br>
+            其中，java代码，资源文件和so库是主要部分。<br>
+            java代码约8.12m，相比上个版本，增加了大概0.5m。<br>
+            资源文件约8.44m，大幅增加了约1.4m。<br>
+            so库约5.63m，增加了约0.8m，主要的增幅为liblivenet库。<br>
+          </div>
+        </div>
+      </div>
+
+      <!--ios包大小对比-->
+      <!-- <div class="iospackage package">
+        <div class="itemtitle">iPhone包大小(Mb)</div>
+        <div id="itotal" class="packagetotal">
+          <div id="ipackagetotal" style="width:580px;height:300px;display:inline-block"></div>
+          <div class="packagedesc">
+             由于苹果的App Store启用了Bitcode功能，即针对每个机型会打包成不同的ipa文件(主要是资源文件的区别)，所以单纯用上传App Store的ipa文件不能全面地表示每个机型上的包的大小，左图仅展示了ipa中可执行的二进制文件的大小。<br/>
+             从图中看出，7.7版本增加了9.28MB左右
+          </div>
+        </div>
+      </div> -->
+
+      <!--android性能对比-->
+      <div class="performance">
+        <div class="itemtitle">Android性能分析实例</div>
+        <div class="subtitle">奇秀客户端启动分析</div>
+        <img src="images/7.8/qixiutrace.jpeg" width="900"/>
+        <div>
+          <ul>
+            <li>首先，能看到奇秀在启动时Application耗时较长。查看代码，发现有很多初始化操作在同步进行，比如fresco。</li>
+            <li>其次，看到中间有很长一段时间的空白，cpu也不在运转，看起来像是个空闲状态。查看代码，是个postDelay。</li>
+            <li>解决方案：启动时，将所有可以单独初始化的行为都放到线程中执行，并稍微滞后。对于fresco这个明显耗时的过程，把splash页面的控件改为系统默认的ImageView，然后再把fresco的初始化异步。最后，去掉多余的postDelay。</li>
+            <li>结果：新版本的奇秀，去除多余的delay，大幅度提高加载速度，2秒左右。调整fresco和欢迎页的图片，节省约200ms。Application的初始化，整体节省500ms以上。</li>          
+          </ul>
+        </div>
+
+        <div class="subtitle">奇秀进入直播间分析</div>
+        <img src="images/7.8/qixiutrace2.jpeg" width="900"/>
+        <div>
+          <ul>
+            <li>首先，从图可知，进入的直播间需要不少绘制不少UI元素。</li>
+            <li>其次，注意到decodeBitmap这个耗时的过程，每次退出再进入房间都会执行一遍。查看代码，由于每次退出都是finish activty，因此没有被缓存。</li>
+            <li>解决方案：合并降低UI的复杂程度。对于decode过程，去除xml中写死的src路径，改为在内存中先主动decode并缓存bitmap，随后在每次onCreate时手动指定。</li>
+            <li>结果：由于做了图片缓存，反复进入直播间，节省约50ms。</li>
+          </ul>
+        </div>
+
+        <div class="subtitle">泡泡启动分析</div>
+        <img src="images/7.8/paopaotrace.png" width="900"/>
+        <div>
+          <ul>
+            <li>首先，启动时有两个activityStart的过程，其中第一个并没有做什么操作，第二个才进行inflate。</li>
+            <li>其次，UI的inflate极为耗时。考虑到页面复杂程度与主App首页区别不大，因此存在问题，需要进一步定位。</li>
+            <li>最后，发现UI在inflate过程中，会去decode一系列诸如"xxx_guide.png"的资源。从命名推测，应该是新手引导类的资源。</li>
+            <li>解决方案：首先，考虑到泡泡的插件历史，第一个activity很可能是以前的某个过渡逻辑，因此可以去除。其次，使用手机的overdraw查看泡泡的界面，发现大片的红色，dump ui以后，发现view的层叠状况非常严重，因此进行合并和整理。最后，使用viewstub替代诸如新手引导这种只需要显示一次的图片资源，从而节省渲染时间。</li>
+          </ul>
+        </div>
+      </div>
+
+      <!--ios性能对比-->
+      <div class="performance">
+        <div class="itemtitle">iPad启动优化</div>
+        <div class="perfitem">
+          <div class="lines" id="iosstartup"></div>
+        </div>
+        <div class="perfdesc">
+          <ul>
+            <li>左图为iPad客户端7.6、7.7和7.8版本在iPad2上的的启动时间对比，7.6版本和7.7版本大致相当，因为中间没做什么特别的启动优化，而7.8版本在7.7版本的基础上进行了大量的优化，目前在iPad2上运行时启动时间已在1.8s左右。</li>
+            <li>7.6和7.7版本由于App启动的时候额外开启了若干线程做模块的初始化工作，这些模块线程在很大程度上干扰了主线程的App的初始化任务，此外，首页界面的绘制也会执行很长一段时间才能完成。</li>
+            <li>7.8版本中优化了之前版本中的问题，通过延后启动模块线程，从而优化了启动速度。此外，又将首页界面的内容初始化工作延后到了播放启动广告的时候进行，将启动性能相比于7.7提高了将近50%。</li>
+          </ul>
+        </div>
+        <!-- <div class="perfitem">
+          <div class="lines" id="ioshalfscreen"></div>
+        </div> -->
+      </div>
+
+    </div>
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./libs/bootstrap.min.js"></script>
+    <script src="./libs/echarts.common.min.js"></script>
+    <script src="./libs/macarons.js"></script>
+    <script src="./data/78data.js"></script>
+    <script src="./report.js"></script>
+  </body>
+</html>
+
