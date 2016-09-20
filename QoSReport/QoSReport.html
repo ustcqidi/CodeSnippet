@@ -193,7 +193,7 @@
             <li>首先，能看到奇秀在启动时Application耗时较长。查看代码，发现有很多初始化操作在同步进行，比如fresco。</li>
             <li>其次，看到中间有很长一段时间的空白，cpu也不在运转，看起来像是个空闲状态。查看代码，是个postDelay。</li>
             <li>解决方案：启动时，将所有可以单独初始化的行为都放到线程中执行，并稍微滞后。对于fresco这个明显耗时的过程，把splash页面的控件改为系统默认的ImageView，然后再把fresco的初始化异步。最后，去掉多余的postDelay。</li>
-            <li>结果：新版本的奇秀，去除多余的delay，大幅度提高加载速度，2秒左右。调整fresco和欢迎页的图片，节省约200ms。Application的初始化，整体节省500ms以上。</li>          
+            <li>结果：新版本的奇秀，去除多余的delay，大幅度提高加载速度，2秒左右。调整fresco和欢迎页的图片，节省约200ms。Application的初始化，整体节省500ms以上。</li>
           </ul>
         </div>
 
@@ -247,4 +247,3 @@
     <script src="./report.js"></script>
   </body>
 </html>
-

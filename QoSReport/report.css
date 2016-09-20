@@ -1,0 +1,111 @@
+.container{
+  background-image: url(images/bg.jpg);
+  width: 1080px;
+  font-size: 18px;
+}
+
+li{
+  font-size: 16px;
+}
+
+b{
+  color: red;
+}
+
+b.g{
+  color: green;
+}
+
+h1{
+  margin: 30px;
+  text-align: center;
+}
+.itemtitle{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.subtitle{
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.doublecolumn{
+  width:420px;
+  height:330px;
+  margin: 10px;
+}
+.column{
+  width: 430px;
+  height: 330px;
+}
+
+.crashdesc{
+  width:410px;
+}
+.pie{
+    width:420px;
+    height:330px;
+    margin: 10px;
+}
+
+.newversion{
+  width:900px;
+  margin: 20px auto;
+  /*border:1px solid lightgray;*/
+}
+.crash{
+  width:900px;
+  margin: 20px auto;
+}
+
+.crashitem{
+  /*border:1px solid lightgray;*/
+  display: inline-block;
+  /*height: 450px;*/
+}
+
+.package{
+  width: 900px;
+  margin: 20px auto;
+  /*border:1px solid lightgray;*/
+}
+
+.packagetotal{
+  display: inline-block;
+  position: relative;
+}
+
+.packagedesc{
+  display: inline-block;
+  position: relative;
+  top: -50px;
+  width: 300px;
+}
+
+.performance{
+  width: 900px;
+  margin: 20px auto;
+  /*border:1px solid lightgray;*/
+}
+.perfitem{
+  width:475px;
+  /*height: 420px;*/
+  display: inline-block;
+}
+.perfdesc{
+  display: inline-block;
+  width: 415px;
+}
+.lines{
+  width:475px;
+  height:320px;
+}
+.intro{
+  width: 900px;
+  margin: 20px auto;
+  /*border:1px solid lightgray;*/
+}
