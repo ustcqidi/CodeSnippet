@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name         = "React"
+  s.name         = "React_debug"
   s.version      = "7.9.2"
-  s.summary      = "React"
+  s.summary      = "React_debug"
 
   s.description  = <<-DESC
                     React description.
@@ -28,11 +28,10 @@ Pod::Spec.new do |s|
 
   s.source_files = 'include/*.h'
   s.public_header_files = 'include/*.h'
-  #s.resources = ['QYBBBundle.bundle']
 
   s.framework = 'SystemConfiguration'
-  s.preserve_paths = 'Release'
-  s.ios.vendored_libraries = 'Release/libReact.a'
+  s.preserve_paths = 'Debug'
+  s.ios.vendored_libraries = 'Debug/libReact.a'
 
   s.library = 'c++'
 
